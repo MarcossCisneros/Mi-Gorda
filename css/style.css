@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Nunito+Sans:opsz@6..12&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap");
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Markazi Text", serif;
+}
+  
+a{
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: all 1s;
+}
+
+.container {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/** header **/
+
+header {
+  background-color: #1c1c1c;
+}
+
+.nav-container {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-container img{
+  width: 64px;
+}
+
+.items-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.items-list a {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #ede4d1;
+}
+
+.items-links:hover {
+  animation: pulse;
+  animation-duration: 0.3s;
+}
+
+/**main-home**/
+main {
+  width: 100%;
+}
+
+.home-container {
+  background-image: url(../img/fondo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home {
+  height: 80vh;
+  backdrop-filter: blur(4px);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  align-self: self-end;
+  max-width: 20rem;
+  justify-self: center;
+}
+
+.banner p {
+  font-size: 3rem;
+  color: #ede4d1;
+}
+
+.divisor {
+  border: 2px solid #ede4d1;
+  border-radius: 20px;
+  margin: 0.5rem 0;
+  backdrop-filter: blur(10px);
+  width: 100%;
+}
+
+.low-btn {
+  margin-bottom: 1rem;
+  text-align: center;
+  align-self: self-end;
+}
+
+/**content**/
+
+.content-and-footer {
+  background-image: url(../img/fondo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.content-container {
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.jobs-container {
+  background-color: #191919;
+  padding: 1.3rem;
+}
+
+.jobs {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  background-image: url(../img/foto\ \(2\).jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+
+.jobs:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
+}
+
+.title-jobs {
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  color: #ede4d1;
+  font-size: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.content-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/foto\ \(7\).jpeg);
+  background-position: center;
+  background-size: cover;
+  color: #ede4d1;
+  gap: 1rem;
+  padding: 20% 0;
+  
+}
+
+.content-info__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+
+
+}
+
+.content-info__text {
+  width: 50%;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
+
+
+/**footer**/
+
+
+.main-container {
+  width: 80%;
+}
+
+/**menu responsive**/
+.menu-open {
+  display: none;
+}
+
+.menu-close,
+.menu-open:hover {
+  cursor: pointer;
+}
+
+.menu-close {
+  display: none;
+}
+
+/**responsive**/
+
+.menu-open {
+  display: none;
+}
+
+.no-display {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+@media screen and (max-width: 810px) {
+  .items {
+    opacity: 0;
+    visibility: hidden;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.4);
+  }
+
+  .visible {
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    animation: slideInRight;
+    animation-duration: 0.5s;
+  }
+
+  .menu-close {
+    display: block;
+  }
+
+  .not-visible {
+    display: none;
+  }
+
+  .items-list {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .divisor {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .divisor-title-contact {
+    width: 80%;
+  }
+
+  .menu-open {
+    padding-top: 1rem;
+    display: block;
+  }
+
+  .menu-open img {
+    width: 2.5rem;
+  }
+
+  .menu-close {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu-close img {
+    width: 2.5rem;
+  }
+
+  .content-info {
+    padding: 5rem 0;
+  }
+
+  .content-info__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .content-info__text {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    font-size: 1.5rem;
+  }
+
+  .contact-items {
+    gap: 1rem;
+  }
+
+  .contact-items__left {
+    width: 90%;
+  }
+  .item-footer {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .content-info__title {
+    text-align: center;
+  }
+
+  .contact-items__right {
+    width: 90%;
+  }
+
+  .home {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .main-container {
+    width: 100%;
+  }
+
+  .banner p {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+}
+
+/**pagina de nuestros trabajos**/
+.cards-jobs {
+  min-height: 100vh;
+  background-color: #191919;
+  padding: 2rem;
+}
+
+/**swiper**/
+.swiper {
+  width: 80%;
+  height: 60vh;
+}
+
+.img-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+    url(../img/header-2.jpg);
+}
+
+.img-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+    url(../img/header-3.jpg);
+}
+
+.img-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+    url(../img/header-1.jpg);
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center center;
+  margin: 2rem 0;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+}
+
+.text-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+}
+
+.swiper-slide-active h1 {
+  animation: fadeInUp 1s;
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 500px) {
+  .swiper {
+    width: 100%;
+  }
+  .swiper-pagination {
+    display: block !important;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+
+.img-1{
+  background-image: url(/img/foto\ \(1\).jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-2{
+  background-image: url(/img/foto\ \(2\).jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.content-info__text{
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.img-3{
+  background-image: url(/img/foto\ \(3\).jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
+.img-11{
+  background-image: url(/img/foto\ \(4\).jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-22{
+  background-image: url(/img/foto\ \(5\).jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.img-33{
+  background-image: url(/img/foto\ \(6\).jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+
+.img-111{
+  background-image: url(/img/foto\ \(7\).jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-222{
+  background-image: url(/img/foto\ \(8\).jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.img-333{
+  background-image: url(/img/foto\ \(9\).jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
